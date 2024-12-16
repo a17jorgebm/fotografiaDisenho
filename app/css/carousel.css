@@ -1,12 +1,13 @@
+:root{
+    --negro-transparencia: rgba(0, 0, 0, 0.68);
+}
+
 #carousel{
     height: 100vh;
     color: white;
-
     overflow: hidden;
-
     padding-top: 100px;
     padding-bottom: 100px;
-
     overflow-x: scroll;
 }
 
@@ -26,6 +27,7 @@
 
 #carousel .horizontal .div-foto{
     position: relative;
+    z-index: 2;
 }
 
 #carousel .horizontal .div-foto img{
@@ -48,14 +50,13 @@
 }
 
 #carousel .horizontal #div-img-3{
-    grid-column: 9 / 13;
-    grid-row: 1 / 7;
+    grid-column: 12 / 16;
+    grid-row: 3 / 8;
 }
 
 #carousel .horizontal #div-img-4{
-    grid-column: 12 / 16;
-    grid-row: 3 / 8;
-    z-index: -1;
+    grid-column: 9 / 13;
+    grid-row: 1 / 7;
 }
 
 #carousel .horizontal #div-img-5{
@@ -82,6 +83,24 @@
     grid-column: 26 / 33;
     grid-row: 5 / 13;
 }
+
+#carousel .horizontal .titulo-foto{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-secundario);
+    background-color: var(--negro-transparencia);
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+#carousel .horizontal .titulo-foto:hover{
+    opacity: 1;
+}
+
 
 /* mirar sticky
     https://www.balans.studio/ pagina guapa

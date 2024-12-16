@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', ()=>{
-
     let carousel = document.getElementById('carousel')
     let horizontal = document.querySelector("#carousel .horizontal")
 
@@ -43,8 +42,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
             //do the default event behavior
         }else {
             e.preventDefault();
-            console.log(isLeftSideVisible(horizontal))
-
             if (!isScrolling) {
                 isScrolling = true;
                 // Scroll by a fixed amount proportional to the deltaY
